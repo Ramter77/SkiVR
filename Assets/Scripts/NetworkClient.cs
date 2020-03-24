@@ -11,7 +11,7 @@ namespace Project.Networking {
         {
             base.Start();
 
-            
+            SetupAllEvents();
         }
 
         // Update is called once per frame
@@ -20,6 +20,20 @@ namespace Project.Networking {
             base.Update();
 
 
+        }
+
+        private void SetupAllEvents() {
+            On("open", (E) => {
+                Debug.Log("Connection made to the server");
+            });
+
+            On("register", (E) => {
+                Debug.Log("Registered to the server");
+            });
+
+            On("start", (E) => {
+                Debug.Log("Start");
+            });
         }
     }
 }
