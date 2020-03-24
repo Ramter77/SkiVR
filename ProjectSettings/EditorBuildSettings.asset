@@ -6,30 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/This2.unity
-    guid: aade5eeb60e552c45b179b66c1a2406a
-  - enabled: 0
-    path: Assets/Scenes/THIS.unity
-    guid: 8f6fd79fbf2b0ae4690187ae79a46066
-  - enabled: 0
-    path: Assets/Scenes/Test1.unity
-    guid: 7a4495aca546e0e4d8d11af3be99858d
-  - enabled: 0
-    path: Assets/Oculus/VR/Scenes/ControllerModels.unity
-    guid: 39cfe7aa0a2d46c47994d8d0308ec663
-  - enabled: 0
-    path: Assets/Scenes/Test3.unity
-    guid: e8c5d5e3991e6d74387bceca4374c170
-  - enabled: 0
-    path: Assets/Scenes/Test4.unity
-    guid: 46e52856876505b4f8c4a29de352c04e
-  - enabled: 0
-    path: Assets/Oculus/VR/Scenes/Room.unity
-    guid: 54445976c1dbf1c49bb38ba7eba558e8
-  - enabled: 0
-    path: Assets/Scenes/Grab.unity
-    guid: 416f3630d1c40b04c86d2dea59f1817d
-  - enabled: 0
-    path: Assets/Scenes/HandsWorking 2.unity
-    guid: 0fb114fb0c2a0cd458df7bb8089a3142
+    path: Assets/Scenes/This3.unity
+    guid: 588d315202174d144ae9df648e71f78b
   m_configObjects: {}
