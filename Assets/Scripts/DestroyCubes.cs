@@ -17,7 +17,7 @@ public class DestroyCubes : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Collided with: " + other.tag);
+        //Debug.Log("Collided with: " + other.tag);
         if (other.tag == "Destroyable") {
             Debug.Log("Destroyed");
             Destroy(other.gameObject);

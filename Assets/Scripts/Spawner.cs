@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> prefabs;
+    public Transform spawnPoint;
     public List<Transform> spawnPoints;
     private float timer;
     public float beat = 1;
@@ -34,7 +35,7 @@ public class Spawner : MonoBehaviour
     }
 
     public void Spawn(int index) {
-        Instantiate(prefabs[index], spawnPoints[0].position, spawnPoints[0].rotation);
+        Instantiate(prefabs[index], spawnPoint.position, spawnPoint.rotation);
     }
 
     public void SpawnRandomly(int index) {
