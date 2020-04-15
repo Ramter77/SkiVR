@@ -6,8 +6,14 @@ using UnityEngine;
 public class SlopeController : Singleton<SlopeController>
 {
     public Transform slope;
+
+    [Header ("Angle")]
     public float slopeAngle = 15;
+    public float slopeAngleMultiplier = 1;
+
+    [Header ("Speed")]
     public float slopeSpeed = 1;
+    public float slopeSpeedMultiplier = 1;
 
 
     private scrollTex scrollTexScript;
@@ -32,22 +38,21 @@ public class SlopeController : Singleton<SlopeController>
         AdjustSlopeProperties();
     }
 
-    public void UpdateSlopeAngle(float newSlopeAngle) {
-        Debug.Log("UPDATED ANGLE: " + newSlopeAngle);
-        //just for now *= and +1
-        slopeAngle *= newSlopeAngle + 1;
+    public void UpdateSlopeAngleMultiplier(float newSlopeAngleMultiplier) {
+        Debug.Log("UPDATED ANGLE: " + newSlopeAngleMultiplier);
+        slopeAngleMultiplier = newSlopeAngleMultiplier;
     }
 
-    public void UpdateSlopeSpeed(float newSlopeSpeed) {
-        slopeSpeed = newSlopeSpeed;
+    public void UpdateSlopeSpeedMultiplier(float newSlopeSpeedMultiplier) {
+        slopeSpeedMultiplier = newSlopeSpeedMultiplier;
     }
 
     private void AdjustSlopeProperties()
     {
         //Rotate the slope platform
-        slope.parent.transform.eulerAngles = new Vector3(slopeAngle, 0, 0);
+        slope.parent.transform.eulerAngles = new Vector3(slopeAngle * slopeAngleMultiplier, 0, 0);
 
         //Adjust the texture scroll speed
-        scrollTexScript.scrollSpeedMultiplier = slopeSpeed;
+        scrollTexScript.scrollSpeedMultiplier = slopeSpeed * slopeSpeedMultiplier;
     }
 }
