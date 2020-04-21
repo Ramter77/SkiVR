@@ -9,7 +9,7 @@ public class GameManager : Singleton<GameManager>
 
     //Keep this alive at all times
     private void Awake() {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Start is called before the first frame update

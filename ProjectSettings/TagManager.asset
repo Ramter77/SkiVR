@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grababble
   - Destroyable
+  - Slope
   layers:
   - Default
   - TransparentFX

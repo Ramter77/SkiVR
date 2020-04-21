@@ -25,6 +25,8 @@ public class SlopeController : Singleton<SlopeController>
     {
         if (!slope) {
             Debug.Log("No Slope found!");
+
+            slope = GameObject.FindGameObjectWithTag("Slope").GetComponent<Transform>();
         }
 
 
@@ -39,7 +41,7 @@ public class SlopeController : Singleton<SlopeController>
     }
 
     public void UpdateSlopeAngleMultiplier(float newSlopeAngleMultiplier) {
-        Debug.Log("UPDATED ANGLE: " + newSlopeAngleMultiplier);
+        //Debug.Log("UPDATED ANGLE: " + newSlopeAngleMultiplier);
         slopeAngleMultiplier = newSlopeAngleMultiplier;
     }
 
