@@ -8,6 +8,7 @@ public class ToggleSlope : MonoBehaviour
     public Material slopeMat;
 
     public bool toggleBool;
+    public GameObject FakeSlope;
 
 
     private MeshRenderer meshRenderer;
@@ -15,9 +16,15 @@ public class ToggleSlope : MonoBehaviour
     public void _ToggleSlope() {
         if (toggleBool) {
             meshRenderer.material = slopeMat;
+
+            meshRenderer.enabled = true;
+            FakeSlope.SetActive(false);
         }
         else {
-            meshRenderer.material = defaultMat;
+            //meshRenderer.material = defaultMat;
+
+            meshRenderer.enabled = false;
+            FakeSlope.SetActive(true);
         }
 
         toggleBool = !toggleBool;

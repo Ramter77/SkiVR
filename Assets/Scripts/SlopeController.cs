@@ -23,14 +23,12 @@ public class SlopeController : Singleton<SlopeController>
     // Start is called before the first frame update
     void Start()
     {
-        if (!slope) {
-            Debug.Log("No Slope found!");
-
-            slope = GameObject.FindGameObjectWithTag("Slope").GetComponent<Transform>();
-        }
+        FindSlope();
 
 
         scrollTexScript = slope.GetComponent<scrollTex>();
+
+        AdjustSlopeProperties();
     }
 
     // Update is called once per frame
@@ -56,5 +54,13 @@ public class SlopeController : Singleton<SlopeController>
 
         //Adjust the texture scroll speed
         scrollTexScript.scrollSpeedMultiplier = slopeSpeed * slopeSpeedMultiplier;
+    }
+
+    public void FindSlope() {
+        if (!slope) {
+            Debug.Log("Finding slope!");
+
+            slope = GameObject.FindGameObjectWithTag("Slope").GetComponent<Transform>();
+        }
     }
 }
