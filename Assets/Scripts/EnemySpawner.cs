@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Spawnrate")]
     public bool enableSpawn = false;
+    public int maxEnemies = 500;
     public float spawnrate = 0;
     private float fallbackSpawnrate = 0;
     public int amountOfEnemysToSpawn = 1;
@@ -19,11 +20,14 @@ public class EnemySpawner : MonoBehaviour
     [Header("Spawn position")]
     public float MinX = 0;
     public float MaxX = 0;
+    public float MinY = 0;
+    public float MaxY = 0;
 
 
     public float MinZ = 0;
     public float MaxZ = 0;
     private int spawnedEnemies;
+    
 
     void Start()
     {
@@ -35,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if(enableSpawn)
         {
-            if (spawnedEnemies >= 50) {
+            if (spawnedEnemies >= maxEnemies) {
                 enableSpawn = false;
             }
 
@@ -48,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
         for(int i = 0; i < amountOfEnemysToSpawn; i++)
         {
             Vector3 centerPos = spawnPoint.position;
-            Vector3 pos = new Vector3(Random.Range(MinX, MaxX), 0, Random.Range(MinZ, MaxZ));
+            Vector3 pos = new Vector3(Random.Range(MinX, MaxX), Random.Range(MinY, MaxY), Random.Range(MinZ, MaxZ));
             Vector3 spawnPos = centerPos - pos;
             int random = Random.Range(0, EnemyPrefabs.Length);
             Instantiate(EnemyPrefabs[random], spawnPos, spawnPoint.rotation);
