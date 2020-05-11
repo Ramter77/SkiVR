@@ -184,6 +184,19 @@ public class OVRPlayerController : MonoBehaviour
 	{
 	}
 
+	public void SetGravity(int mod) {
+		GravityModifier = mod;
+	}
+
+	public void ToggleGravity() {
+		if (GravityModifier == 1) {
+			GravityModifier = 0;
+		}
+		else if (GravityModifier == 0) {
+			GravityModifier = 1;
+		}
+	}
+
 	void OnDisable()
 	{
 		if (playerControllerEnabled)

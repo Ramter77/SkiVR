@@ -14,6 +14,10 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
     public class ShowSliderValue : MonoBehaviour
     {
         [SerializeField]
+        private bool showSlopeAngleInstead;
+
+
+        [SerializeField]
         private TextMeshPro textMesh = null;
 
         public void OnSliderUpdated(SliderEventData eventData)
@@ -25,7 +29,12 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 
             if (textMesh != null)
             {
-                textMesh.text = $"{eventData.NewValue:F2}";
+                if (showSlopeAngleInstead) {
+                    textMesh.text = (Mathf.Round(eventData.NewValue * 45f * 10f) / 10f).ToString() + "°";
+                }
+                else {
+                    textMesh.text = $"{eventData.NewValue:F2}";
+                }
             }
         }
     }
