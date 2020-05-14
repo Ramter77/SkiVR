@@ -32,7 +32,7 @@ namespace Project.Networking {
                 Debug.Log("Connection made to the server");
             });
 
-            On("register", (E) => {
+            On("registerGame", (E) => {
                 Debug.Log("Registered to the server");
 
                 NetworkIdentity ni = GetComponent<NetworkIdentity>();

@@ -38,7 +38,7 @@ namespace Project.Networking {
             Debug.Log("---------------SOCKET-------------");
             Debug.Log(socket);
 
-            socket.Emit("hello");
+            socket.Emit("registeredGame");
         }
 
         public SocketIOComponent GetSocket() {

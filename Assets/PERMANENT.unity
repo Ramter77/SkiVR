@@ -20054,12 +20054,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231337913}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1233738078 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2343937678421161399, guid: e855e4c2a827daf45be5e0ca86dd6d05,
-    type: 3}
-  m_PrefabInstance: {fileID: 849105998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1235028799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24590,95 +24584,6 @@ Transform:
   m_Father: {fileID: 1231337914}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1512253214
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1233738078}
-    m_Modifications:
-    - target: {fileID: 6297684789851832977, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: EnableBody
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789851832977, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: oculusUserID
-      value: 2689953354463734
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789851837153, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857299957, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_Name
-      value: MRTK-Quest_LocalAvatar
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857299957, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297684789857506697, guid: bc9433565454e104f9ac73600c65a612,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc9433565454e104f9ac73600c65a612, type: 3}
 --- !u!1 &1515022309
 GameObject:
   m_ObjectHideFlags: 0
@@ -26219,7 +26124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f1a42e35c32f34eb48413955eb5e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: ws://192.168.178.40:45678/socket.io/?EIO=4&transport=websocket
+  url: ws://95.90.201.53:52300/socket.io/?EIO=4&transport=websocket
   autoConnect: 1
   reconnectDelay: 5
   ackExpirationTime: 1800
